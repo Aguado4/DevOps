@@ -1,5 +1,5 @@
 import json
-#a
+#
 def lambda_handler(event, context):
     # Política de tratamiento de datos (puede ser un texto más largo en la práctica)
     data_policy = """
