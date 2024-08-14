@@ -29,7 +29,7 @@ jobs:
 
     - name: Package Lambda function
       run: |
-        zip -r function.zip .
+        zip -r funcion.zip .
 
     - name: Deploy to AWS Lambda
       uses: aws-actions/aws-cli-action@v2
@@ -38,4 +38,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
         cli-command: |
-          aws lambda update-function-code --function-name funcion --zip-file fileb://funcion.zip
+          aws lambda update-function-code --function-name funcion.py --zip-file fileb://funcion.zip
