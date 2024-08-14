@@ -35,8 +35,8 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-region: us-east-2
     
     - name: Deploy to AWS Lambda
       run: |
-        aws lambda update-function-code --function-name lambda_function --zip-file fileb://function.zip
+        aws lambda update-function-code --function-name lambda_handler --zip-file fileb://function.zip
