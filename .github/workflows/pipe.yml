@@ -33,11 +33,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
-    - name: Run AWS tests
-      run: |
-        aws lambda invoke --function-name prueba  --log-type Tail output.txt
-        cat output.txt
-    
     - name: Deploy to AWS Lambda
       if: success()
       run: |
