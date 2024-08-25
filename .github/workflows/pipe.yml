@@ -24,7 +24,7 @@ jobs:
 
     - name: Package Lambda function
       run: |
-        zip -r function.zip lambda_function.py
+        zip -r function.zip funcion.py
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
@@ -36,7 +36,7 @@ jobs:
     - name: Deploy to AWS Lambda
       if: success()
       run: |
-        aws lambda update-function-code --function-name lambda_function --zip-file fileb://function.zip
+        aws lambda update-function-code --function-name funcion --zip-file fileb://function.zip
         
     - name: Run AWS tests
       run: |
