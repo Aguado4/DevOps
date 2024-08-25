@@ -29,7 +29,7 @@ jobs:
 
     - name: Package Lambda function
       run: |
-        zip -r function.zip .
+        zip -r function.zip funcion.py
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
