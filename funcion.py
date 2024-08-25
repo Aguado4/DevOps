@@ -12,7 +12,7 @@ def lambda_handler(event, context):
     # Simulación de la aceptación del usuario (en un entorno real, esto vendría del front-end)
     user_acceptance = event.get("user_acceptance", "no")
 
-    if user_acceptance.lower() == "yes":
+    i user_acceptance.lower() == "yes":
         return {
             'statusCode': 200,
             'body': json.dumps('User accepted the data policy.')
