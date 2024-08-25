@@ -20,12 +20,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        aws lambda invoke --function-name prueba output.txt
-        cat output.txt
+        python -m pip install --upgrade pip
 
     - name: Run AWS tests
       run: |
-        python -m unittest discover
+        aws lambda invoke --function-name funcion output.txt
+        cat output.txt
 
     - name: Package Lambda function
       run: |
