@@ -38,17 +38,12 @@ jobs:
       run: |
         aws lambda update-function-code --function-name funcion --zip-file fileb://function.zip
 
-    - name: Check test-event.json content
+    - name: Invoke Lambda function
       run: |
-        cat final.json
-
-    - name: Make HTTP request to Lambda
-      run: |
-        curl -X POST \
-          -H "Content-Type: application/json" \
-          -d @final.json \
-          https://dhveejdeej4wa6sc4wltxasl240pdndo.lambda-url.us-east-2.on.aws/ \
-          -o response.json
+        aws lambda invoke \
+          --function-name funcion \
+          --payload '{"user_acceptance": "yes"}' \  # Cambia esto con el evento de prueba que quieras enviar
+          response.json
 
     - name: Display Lambda response
       run: |
