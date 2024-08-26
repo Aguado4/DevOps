@@ -38,6 +38,10 @@ jobs:
       run: |
         aws lambda update-function-code --function-name funcion --zip-file fileb://function.zip
 
+    - name: Check test-event.json content
+      run: |
+        cat test-event.json
+
     - name: Make HTTP request to Lambda
       run: |
         curl -X POST \
