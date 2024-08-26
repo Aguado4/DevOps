@@ -40,7 +40,7 @@ jobs:
 
     - name: Check test-event.json content
       run: |
-        cat test-event.json
+        cat final.json
 
     - name: Make HTTP request to Lambda
       run: |
