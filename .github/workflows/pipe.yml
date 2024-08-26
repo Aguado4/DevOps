@@ -40,6 +40,6 @@ jobs:
         
     - name: Run AWS tests
       run: |
-        aws lambda invoke --function-name prueba  --log-type Tail output.txt
+        aws lambda invoke --function-name final  --log-type Tail output.txt
         cat output.txt
             
