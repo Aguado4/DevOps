@@ -38,15 +38,28 @@ jobs:
       run: |
         aws lambda update-function-code --function-name funcion --zip-file fileb://function.zip
 
-    - name: Invoke Lambda function
+    - name: Invoke Lambda function with test-pos.json
       run: |
         aws lambda invoke \
-          --function-name funcion \
-          --payload file://test-pos.json \
-          response.json \
+        --function-name your-lambda-function-name \
+        --payload file://test-pos.json \
+        response-pos.json \
+        --cli-binary-format raw-in-base64-out
+
+    - name: Display response from test-pos.json
+      run: |
+        echo "Response from test-pos.json:"
+        cat response-pos.json
+
+    - name: Invoke Lambda function with test-neg.json
+      run: |
+        aws lambda invoke \
+          --function-name your-lambda-function-name \
+          --payload file://test-neg.json \
+          response-neg.json \
           --cli-binary-format raw-in-base64-out
 
-    - name: Display Lambda response
+    - name: Display response from test-neg.json
       run: |
-        echo "Response from Lambda:"
-        cat response.json
+        echo "Response from test-neg.json:"
+        cat response-neg.json
