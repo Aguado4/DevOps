@@ -45,7 +45,6 @@ jobs:
           --payload file://test-pos.json \
           response.json
 
-
     - name: Display Lambda response
       run: |
         echo "Response from Lambda:"
