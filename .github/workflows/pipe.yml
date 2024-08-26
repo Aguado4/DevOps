@@ -42,7 +42,7 @@ jobs:
       run: |
         aws lambda invoke \
           --function-name funcion \
-          --payload '{"user_acceptance": "yes"}' \
+          --payload file://test-pos.json \
           response.json
 
 
