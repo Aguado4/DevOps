@@ -41,7 +41,7 @@ jobs:
     - name: Invoke Lambda function with test-pos.json
       run: |
         aws lambda invoke \
-        --function-name your-lambda-function-name \
+        --function-name funcion \
         --payload file://test-pos.json \
         response-pos.json \
         --cli-binary-format raw-in-base64-out
@@ -54,7 +54,7 @@ jobs:
     - name: Invoke Lambda function with test-neg.json
       run: |
         aws lambda invoke \
-          --function-name your-lambda-function-name \
+          --function-name funcion \
           --payload file://test-neg.json \
           response-neg.json \
           --cli-binary-format raw-in-base64-out
