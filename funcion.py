@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     if user_acceptance.lower() == "yes":
         return {
             'statusCode': 200,
-            'body': json.dumps('User accepted the data policy.')
+            'body': json.dumps('User accepted the data policy. Funciono')
         }
     else:
         return {
