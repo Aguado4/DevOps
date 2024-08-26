@@ -42,7 +42,7 @@ jobs:
       run: |
         aws lambda invoke \
           --function-name funcion \
-          --payload file://test-pos.json \
+          --payload file://test-neg.json \
           response.json \
           --cli-binary-format raw-in-base64-out
 
