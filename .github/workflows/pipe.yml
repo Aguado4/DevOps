@@ -42,8 +42,9 @@ jobs:
       run: |
         aws lambda invoke \
           --function-name funcion \
-          --payload '{"user_acceptance": "yes"}' \  # Cambia esto con el evento de prueba que quieras enviar
+          --payload '{"user_acceptance": "yes"}' \
           response.json
+
 
     - name: Display Lambda response
       run: |
