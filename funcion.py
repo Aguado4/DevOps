@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     By using this service, you agree to our data policy:
     - We collect and store personal data for service improvements.
     - Your data will not be shared with third parties without consent.
-    - You can review the full policy at our website. trolazo
+    - You can review the full policy at our website. 
     """
     
     # Simulación de la aceptación del usuario (en un entorno real, esto vendría del front-end)
@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     if user_acceptance.lower() == "yes":
         return {
             'statusCode': 200,
-            'body': json.dumps('User accepted the data policy. Funciono')
+            'body': json.dumps('User accepted the data policy.')
         }
     else:
         return {
